@@ -1,0 +1,52 @@
+moto moto1= new moto(2,32,45,"amarillo",12,"hola");
+moto1.acelerar();
+moto1.arrancar();
+moto1.frenar();
+moto1.wily();
+vehiculo caballo=new vehiculo();
+caballo.acelerar();
+
+
+ class vehiculo{
+    protected int ruedas;
+    protected double peso;
+    protected double dimension;
+    protected string color;
+    
+    public vehiculo(){}
+
+public vehiculo(int ruedas, double peso, double dimension, string color){
+    this.ruedas =ruedas;
+    this.peso= peso;
+    this.dimension= dimension;
+    this.color= color;
+    Console.WriteLine("Vehiculo creado");
+
+}
+public void acelerar(){
+    Console.WriteLine("Vehiculo acelerando");
+}
+public void arrancar(){
+    Console.WriteLine("Vehiculo arrancado");
+}
+public void frenar(){
+    Console.WriteLine("Vehiculo frenado");
+}
+    }
+    
+    
+    
+    
+    public moto(int ruedas, double peso, double dimension, string color, int motor, string seguridad):base(ruedas,  peso, dimension, color){
+        this.motor=motor;
+        this.seguridad=seguridad;
+        Console.WriteLine("Moto creada");
+    }
+    public void wily(){
+        Console.WriteLine("Moto haciendo wily");
+    }
+
+    public new void acelerar(){
+    Console.WriteLine("Vehiculo moto acelerando");
+}
+}
